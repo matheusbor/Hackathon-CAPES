@@ -1,5 +1,7 @@
 import 'package:capes/data/article_api.dart';
-import 'package:capes/view/screens/chatbot_screen.dart';
+import 'package:capes/view/widgets/ia_response.dart';
+import 'package:capes/view/screens/home_screen.dart';
+import 'package:capes/view/screens/search_screen.dart';
 import 'package:capes/view/widgets/footer.dart';
 import 'package:capes/view/widgets/navbar.dart';
 import 'package:capes/view/widgets/theme.dart';
@@ -31,16 +33,16 @@ class MyApp extends StatelessWidget {
       labelSmall: Theme.of(context).textTheme.labelSmall,
     ));
     return MaterialApp(
-        //theme: materialTheme.personalizated(),
-        // darkTheme: materialTheme.dark(),
-        // themeMode: ThemeMode.system,
-
-        home: ListView(
-      children: [
-        NavBar(),
-        Spacer(),
-        Footer(),
-      ],
-    ));
+      //theme: materialTheme.personalizated(),
+      // darkTheme: materialTheme.dark(),
+      // themeMode: ThemeMode.system,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => HomePage(),
+        "/search": (context) => SearchScreen(),
+        //"/profile": (context) =>
+      },
+      // home: SearchScreen(),
+    );
   }
 }
