@@ -14,20 +14,16 @@ Criar uma experiência de usuário fluida, intuitiva e personalizada, otimizando
 
 1. **Integração com ChatGPT-4omni**:
    - A busca no portal retorna não apenas resultados da base OpenAlex, mas também respostas detalhadas geradas pelo modelo mais atual do ChatGPT.
-   - Um chatbot integrado ajuda os usuários a realizar pesquisas e navegar pelo site.
+   - Um chatbot integrado a barra de pesquisa ajuda os usuários a realizar pesquisas e navegar pelo site.
 
 2. **Framework Front-End Flutter**:
-   - **Cross-platform**: O projeto atualmente funciona apenas para web, porém ele é composto de um código único que pode ser compilado para web, desktop (Windows, Mac, Linux).
+   - **Cross-platform**: O projeto foi implementado para web, mas pode ser estendido para todas plataformas.
    - Componentes nativos para acessibilidade e usabilidade intuitiva.
 
 3. **Backend em Python com Flask**:
    - API robusta que gerencia consultas ao OpenAlex e integra perguntas/respostas do ChatGPT.
    - Retorno de dados em formato JSON, consumidos pelo front-end.
    - Fácil manutenção e escalabilidade.
-
-4. **Acessibilidade aprimorada**:
-   - Componentes acessíveis do Flutter.
-   - Integração com o serviço **VLibras** do governo federal para usuários com necessidades especiais.
 
 
 ## 💻 Tecnologias Utilizadas
@@ -46,11 +42,12 @@ Criar uma experiência de usuário fluida, intuitiva e personalizada, otimizando
 1. **Página Principal do Portal de Periódicos da CAPES**:
    - Design intuitivo e responsivo.
    - Barra de pesquisa com integração de IA.
+    <img src="assets\imagem1.jpg" alt="Página Principal" width="600"/>
 
 2. **Página de Busca**:
    - Resultados da base OpenAlex e sugestões inteligentes via ChatGPT.
    - Chatbot interativo integrado à experiência de navegação.
-
+      <img src="assets\imagem2.jpg" alt="Página Principal" width="600"/>
 
 ## 🛠️ Como Executar
 
@@ -67,11 +64,13 @@ Criar uma experiência de usuário fluida, intuitiva e personalizada, otimizando
    ```
 
 2. Instale as dependências do back-end:
+Atenção na instação do openai, pip install openai==0.28
    ```bash
    pip install -r requirements.txt
    ```
 
 3. Inicie o servidor Flask:
+Para consultas use o server.py e para usar a ferramenta de busca com IA use o chatbot.py
    ```bash
    python server.py
    python chatbot.py

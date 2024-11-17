@@ -9,6 +9,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
+
   runApp(MyApp());
 }
 
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
       labelSmall: Theme.of(context).textTheme.labelSmall,
     ));
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       //theme: materialTheme.personalizated(),
       // darkTheme: materialTheme.dark(),
       // themeMode: ThemeMode.system,
