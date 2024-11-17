@@ -2,7 +2,7 @@ import openai
 from flask import Flask, request, jsonify
 import json
 
-openai.api_key = "API_KEY"
+openai.api_key = "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"
 
 def chat_with_gpt(prompt, history=[]):
     try:

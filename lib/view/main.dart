@@ -1,5 +1,7 @@
 import 'package:capes/view/screens/chatbot_screen.dart';
-import 'package:capes/view/theme.dart';
+import 'package:capes/view/widgets/footer.dart';
+import 'package:capes/view/widgets/navbar.dart';
+import 'package:capes/view/widgets/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,12 +37,19 @@ class MyApp extends StatelessWidget{
       )
     );
     return MaterialApp(
-      theme: materialTheme.personalizated(),
+      //theme: materialTheme.personalizated(),
       // darkTheme: materialTheme.dark(),
       // themeMode: ThemeMode.system,
 
 
-      home:ChatBot(),
+      home:ListView(
+        children: [
+          NavBar(),
+          Spacer(),
+
+          Footer(),
+        ],
+      )
     );
   }
 

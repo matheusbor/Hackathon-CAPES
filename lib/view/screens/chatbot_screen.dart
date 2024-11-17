@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:capes/view/theme.dart';
+import 'package:capes/view/widgets/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -49,6 +49,7 @@ class _ChatBotState extends State<ChatBot> {
     return Scaffold(
 
       body: Container(
+        height: 512,
         margin: EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: MaterialTheme.personalizatedLight().surface,
