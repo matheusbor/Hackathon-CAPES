@@ -2,8 +2,12 @@ import openai
 from flask import Flask, request, jsonify
 import json
 from flask_cors import CORS
+from dotenv import load_dotenv
+import os
 
-openai.api_key = "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"
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def chat_with_gpt(prompt, history=[]):
     try:
